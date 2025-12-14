@@ -1,0 +1,485 @@
+/* Importação de Fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap');
+
+/* =============================== */
+/* RESET E CONFIGURAÇÕES GLOBAIS */
+/* =============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f7f7f7;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #5d4037; /* Marrom suave */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #a1887f; /* Tom mais claro de marrom/cobre */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Títulos de Seção */
+h2, h3 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5d4037;
+}
+
+/* =============================== */
+/* HEADER E NAVEGAÇÃO */
+/* =============================== */
+#header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    position: sticky; /* Fica fixo no topo ao rolar */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #5d4037;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+#navbar ul li a {
+    padding: 10px 15px;
+    font-weight: 500;
+    display: block;
+}
+
+/* =============================== */
+/* BOTÕES DE AÇÃO (CTA) */
+/* =============================== */
+
+/* Botão Principal: Agendamento (Cobre/Dourado) */
+.btn-agendar, .btn-primary, .btn-service {
+    background-color: #c99e69; 
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.btn-agendar:hover, .btn-primary:hover, .btn-service:hover {
+    background-color: #a1887f; 
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #5d4037;
+    border: 2px solid #5d4037;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: #5d4037;
+    color: #fff;
+}
+
+.large {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+}
+
+.btn-outline {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+    border: 2px solid #5d4037;
+    color: #5d4037;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.btn-outline:hover {
+    background-color: #5d4037;
+    color: #fff;
+}
+
+
+/* =============================== */
+/* SEÇÃO HERO (Banner Principal) */
+/* =============================== */
+.hero-section {
+    /* Troque o 'url()' pela sua melhor imagem de fundo */
+    background: url('placeholder-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3); 
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.hero-actions a {
+    margin: 0 10px;
+}
+
+/* =============================== */
+/* SEÇÃO DESTAQUES/CARDS */
+/* =============================== */
+.features-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.cards-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+.card {
+    flex-basis: calc(33% - 20px); 
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    background-color: #fcfcfc;
+}
+
+.card h4 {
+    color: #c99e69;
+    margin-bottom: 10px;
+}
+
+/* =============================== */
+/* SEÇÃO SERVIÇOS EM DESTAQUE */
+/* =============================== */
+.services-section {
+    padding: 80px 0;
+    background-color: #f7f7f7;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.service-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.service-info h3 {
+    font-family: 'Playfair Display', serif;
+    color: #5d4037;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.service-info p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.cta-services {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta-services p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #5d4037;
+}
+
+
+/* =============================== */
+/* GALERIA E DEPOIMENTOS */
+/* =============================== */
+.gallery-section, .testimonials-section {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fcfcfc;
+    border-left: 5px solid #c99e69;
+    font-style: italic;
+    border-radius: 0 8px 8px 0;
+}
+
+.testimonial-item footer {
+    text-align: right;
+    margin-top: 10px;
+    font-style: normal;
+    color: #777;
+}
+
+/* =============================== */
+/* CTA FINAL */
+/* =============================== */
+.cta-section {
+    background-color: #5d4037; /* Marrom forte */
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.cta-section h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* =============================== */
+/* SEÇÃO DE CONTATO E LOCALIZAÇÃO */
+/* =============================== */
+.contact-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.contact-grid {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.info-details {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.info-details h3 {
+    text-align: left;
+    color: #c99e69;
+}
+
+.info-details p {
+    margin-bottom: 10px;
+}
+
+.map-embed {
+    flex: 2;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-embed iframe {
+    display: block;
+}
+
+.horarios-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.horarios-list li {
+    margin-bottom: 5px;
+}
+
+/* =============================== */
+/* RODAPÉ (FOOTER) */
+/* =============================== */
+#footer {
+    background-color: #333333;
+    color: #cccccc;
+    padding: 40px 0 20px 0;
+    font-size: 0.9rem;
+}
+
+#footer .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    border-top: 1px solid #444;
+    padding-top: 30px;
+}
+
+#footer h4 {
+    color: #c99e69;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+#footer ul {
+    list-style: none;
+}
+
+#footer ul li a {
+    color: #cccccc;
+    display: block;
+    padding: 3px 0;
+}
+
+#footer ul li a:hover {
+    color: #fff;
+}
+
+.social-media a {
+    display: inline-block;
+    color: #fff;
+    margin-right: 15px;
+    font-size: 1.1rem;
+}
+
+.copyright {
+    grid-column: 1 / -1; /* Ocupa todas as colunas */
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+/* =============================== */
+/* RESPONSIVIDADE (MOBILE FIRST) */
+/* =============================== */
+@media (max-width: 768px) {
+    /* Header e Nav */
+    #header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #navbar ul li a {
+        padding: 5px 0;
+    }
+
+    .btn-agendar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Hero */
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn-secondary {
+        margin-left: 0; 
+    }
+
+    /* Cards */
+    .card {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* Contato */
+    .contact-grid {
+        flex-direction: column;
+    }
+    .map-embed {
+        order: 1; 
+    }
+    .info-details {
+        order: 2;
+    }
+
+    /* Rodapé */
+    #footer .container {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+}
